@@ -1,0 +1,325 @@
+/* All */
+* {
+  font-family: Microsoft JhengHei;
+}
+/* Header */
+
+header {
+  background-color: rgb(78, 78, 190);
+  position: fixed;
+  top: -10px;
+  width: 100%;
+  z-index: 5;
+  padding-left: 10px;
+}
+
+header #title {
+  display: inline;
+  font-size: 30px;
+  padding: 10px 0;
+  text-decoration: none;
+  position: relative;
+  right: 10px;
+  top: 25px;
+  color: white;
+}
+
+header #title ul {
+  list-style: none;
+}
+
+header #menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+header li a {
+  display: block;
+  padding: 20px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+/* Menu */
+
+header #menu {
+  clear: both;
+  max-height: 0;
+}
+
+/* Menu Icon */
+
+header #menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 30px;
+  position: relative;
+  user-select: none;
+}
+
+header #menu-icon .navicon {
+  display: block;
+  position: relative;
+}
+
+/* Menu button */
+
+header #menu-btn {
+  display: none;
+}
+
+header #menu-btn:checked ~ #menu {
+  max-height: 420px;
+}
+
+/* Main */
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 10px;
+}
+/* Event */
+main #eventNav {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+main #eventNav button {
+  background-color: rgb(144, 144, 194);
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+/* Instruction */
+main #instr {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+}
+main #instr button {
+  background-color: rgb(144, 144, 194);
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 90%;
+}
+
+/* Information */
+main #info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Sorting */
+main #info #sorting span {
+  display: inline-block;
+  width: 60%;
+}
+
+main #info #sorting input {
+  width: 50%;
+  margin-right: 10px;
+}
+
+/* Detail */
+main #info #detail {
+  margin: 10px auto;
+}
+main #info #detail div {
+  border: 1px solid black;
+  margin: 20px 0 20px;
+  padding: 10px;
+  min-width: 400px;
+}
+
+main #info #detail div:first-child {
+  font-weight: bold;
+}
+
+main #info #detail .col2 {
+  display: inline-block;
+  width: 48%;
+}
+
+main #info #detail .col1 {
+  display: inline-block;
+  width: 90%;
+}
+
+/* Aside */
+
+aside {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Link */
+aside #link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 4px;
+}
+aside #link button {
+  background-color: rgb(144, 144, 194);
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px;
+  cursor: pointer;
+  width: 200px;
+}
+/* Others*/
+aside #others {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+aside #others ul {
+  list-style: none;
+  padding: 0px;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: rgb(201, 196, 196);
+}
+
+footer section {
+  padding: 10px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0px;
+}
+
+/* RWD */
+
+@media (min-width: 600px) {
+  header #menu {
+    clear: none;
+    float: right;
+    max-height: none;
+    margin-right: 20px;
+  }
+
+  /* Header */
+
+  header li {
+    float: left;
+  }
+
+  header li a {
+    padding: 30px 5px;
+  }
+
+  /* Icon of Header */
+  header #menu-icon {
+    display: none;
+  }
+
+  /* Main */
+  main {
+    border: 1px solid black;
+  }
+
+  /* Event */
+  main #eventNav {
+    flex-direction: row;
+  }
+
+  /* Instruction */
+  main #instr {
+    flex-direction: row;
+  }
+
+  /* Sorting */
+  main #info #sorting span {
+    width: 15%;
+    margin-right: 0px;
+  }
+
+  main #info #sorting input {
+    width: 20%;
+  }
+
+  /* Detail */
+  main #info #detail div {
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 5px 0 5px;
+    display: inline-block;
+    width: 95%;
+    font-size: 80%;
+  }
+
+  main #info #detail .col2 {
+    display: inline-block;
+    width: 15%;
+  }
+  main #info #detail .col1 {
+    display: inline-block;
+    width: 20%;
+  }
+
+  /* Aside */
+
+  aside {
+    flex-direction: row;
+  }
+
+  /* Others */
+  aside #others {
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 0px;
+  }
+
+  /* Footer */
+  
+  footer {
+    flex-direction: row;
+  }
+
+  footer section {
+    margin-left: 20px;
+  }
+}
